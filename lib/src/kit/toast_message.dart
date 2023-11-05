@@ -47,7 +47,7 @@ class OverlayToastMessage extends StatefulWidget {
 }
 
 class _ToastWidgetState extends State<OverlayToastMessage> {
-  Offset offset = const Offset(0, -1);
+  Offset offset = const Offset(0, 1);
   late Timer timer;
 
   @override
@@ -59,7 +59,7 @@ class _ToastWidgetState extends State<OverlayToastMessage> {
     });
 
     timer = Timer(widget.duration - widget.animDuration, () {
-      offset = const Offset(0, -1);
+      offset = const Offset(0, 1);
       setState(() {});
     });
   }
@@ -89,8 +89,7 @@ class _ToastWidgetState extends State<OverlayToastMessage> {
                         color: Colors.black12,
                       )
                     ],
-                    borderRadius:
-                        widget.borderRadius ?? BorderRadius.circular(8),
+                    borderRadius: widget.borderRadius ?? BorderRadius.circular(8),
                   ),
               child: Padding(
                 padding: const EdgeInsets.all(15),
