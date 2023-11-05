@@ -119,7 +119,7 @@ class _ToastWidgetState extends State<OverlayToastMessage> {
       alignment: Alignment.topCenter,
       child: Padding(
         padding: EdgeInsets.only(
-          top: mediaQuery.padding.top,
+          // top: mediaQuery.padding.top,
           bottom: mediaQuery.padding.bottom,
         ),
         child: w,
