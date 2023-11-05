@@ -47,19 +47,19 @@ class OverlayToastMessage extends StatefulWidget {
 }
 
 class _ToastWidgetState extends State<OverlayToastMessage> {
-  Offset offset = const Offset(0, 2);
+  Offset offset = const Offset(0, 16);
   late Timer timer;
 
   @override
   void initState() {
     super.initState();
     WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
-      offset = const Offset(0, 2);
+      offset = const Offset(0, 14);
       setState(() {});
     });
 
     timer = Timer(widget.duration - widget.animDuration, () {
-      offset = const Offset(0, 2);
+      offset = const Offset(0, 16);
       setState(() {});
     });
   }
